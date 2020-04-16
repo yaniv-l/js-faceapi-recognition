@@ -71,7 +71,7 @@ function loadLabeledImages() {
             const descriptions = []
             // Each folder has 2 images for this face detection model
             for (let i = 1; i <= 2; i++) {
-                const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/WebDevSimplified/Face-Recognition-JavaScript/master/labeled_images/${label}/${i}.jpg`)
+                const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/yaniv-l/js-faceapi-recognition/master/labeled_images/${label}/${i}.jpg`)
                 const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
                 descriptions.push(detections.descriptor)
             }
